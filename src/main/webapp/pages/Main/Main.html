@@ -1,10 +1,31 @@
 <wm-page data-ng-controller="MainPageController" name="mainpage">
-  <wm-left-panel content="leftnav" name="left_panel1"></wm-left-panel>
-  <wm-mobile-navbar name="mobile_navbar1" title="Title" leftnavpaneliconclass="wi wi-menu" backbutton="false">
-    <wm-anchor caption="" name="AddLink" iconclass="wi wi-gear"></wm-anchor>
-  </wm-mobile-navbar>
-  <wm-content name="content1">
-    <wm-page-content columnwidth="12" name="page_content1"></wm-page-content>
-  </wm-content>
-  <wm-mobile-tabbar dataset="home,music,edit" name="mobile_tabbar1"></wm-mobile-tabbar>
+    <wm-left-panel content="leftnav" name="left_panel1"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1" title="Title" leftnavpaneliconclass="wi wi-menu" backbutton="false">
+        <wm-anchor caption="" name="AddLink" iconclass="wi wi-gear"></wm-anchor>
+    </wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-camera name="camera1"></wm-camera>
+            <wm-composite name="composite1">
+                <wm-label class="col-xs-4 control-label" name="label1" caption="First Value"></wm-label>
+                <wm-container class="col-xs-8" name="container1">
+                    <wm-text name="text1"></wm-text>
+                </wm-container>
+            </wm-composite>
+            <wm-composite name="composite2">
+                <wm-label class="col-xs-4 control-label" name="label2" caption="Second Value"></wm-label>
+                <wm-container class="col-xs-8" name="container2">
+                    <wm-text name="text2"></wm-text>
+                </wm-container>
+            </wm-composite>
+            <wm-button class="btn-default" caption="SUM" type="button" margin="unset 0.5em" name="button1" on-tap="button1Tap($event, $scope)"></wm-button>
+            <wm-composite name="composite3">
+                <wm-label class="col-xs-4 control-label" name="label3" caption="Result"></wm-label>
+                <wm-container class="col-xs-8" name="container3">
+                    <wm-text name="text3"></wm-text>
+                </wm-container>
+            </wm-composite>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar dataset="home,music,edit" name="mobile_tabbar1"></wm-mobile-tabbar>
 </wm-page>
