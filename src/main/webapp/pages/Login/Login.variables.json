@@ -1,1 +1,22 @@
-{ }
+{
+  "cognitoLogin" : {
+    "_id" : "wm-cognitoLogin-wm.LoginVariable-1537869409284",
+    "name" : "cognitoLogin",
+    "owner" : "Page",
+    "category" : "wm.LoginVariable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "username" : "",
+      "password" : "",
+      "rememberme" : false
+    },
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "spinnerContext" : "page",
+    "useDefaultSuccessHandler" : true
+  }
+}

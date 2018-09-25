@@ -1,0 +1,34 @@
+<wm-page data-ng-controller="RegistrationPageController" name="page1">
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-form class="panel-default" name="form2">
+                <wm-layoutgrid name="layoutgrid2">
+                    <wm-gridrow name="gridrow4">
+                        <wm-gridcolumn name="gridcolumn5" columnwidth="12" class="col-xs-6">
+                            <wm-text tabindex="1" placeholder="UserName" name="txtUserName" height="40" borderstyle="solid" borderunit="px"></wm-text>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow5">
+                        <wm-gridcolumn name="gridcolumn6">
+                            <wm-text tabindex="1" placeholder="Email" name="txtEmail" height="40" borderstyle="solid"></wm-text>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow6">
+                        <wm-gridcolumn name="gridcolumn7">
+                            <wm-text tabindex="1" placeholder="Password" name="pswPassword" height="40" borderunit="px" borderstyle="solid"></wm-text>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow4_1">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn5_1">
+                            <wm-text tabindex="1" placeholder="Phone Number" height="40" borderstyle="solid" name="txtPhoneNumber"></wm-text>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-label caption="Password should be  minimum 8 characters,uppercase letters, lowercase letters, special characters, numbers" name="label8" width="100%" margin=".5em unset 0em unset" padding="unset unset 1em 1em"></wm-label>
+                </wm-layoutgrid>
+                <wm-buttongroup horizontalalign="right" class="form-action col-md-12" name="buttongroup2">
+                    <wm-button caption="Sign up" width="100%" class="btn-primary btn-lg" name="button6" margin=".5em unset" on-tap="button6Tap($event, $scope)"></wm-button>
+                </wm-buttongroup>
+            </wm-form>
+        </wm-page-content>
+    </wm-content>
+</wm-page>

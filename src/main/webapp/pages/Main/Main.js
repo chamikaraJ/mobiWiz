@@ -22,3 +22,14 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
     };
 
 }]);
+
+
+
+
+
+Application.$controller("liveform3Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);

@@ -5,27 +5,56 @@
     </wm-mobile-navbar>
     <wm-content name="content1">
         <wm-page-content columnwidth="12" name="page_content1">
-            <wm-camera name="camera1"></wm-camera>
-            <wm-composite name="composite1">
-                <wm-label class="col-xs-4 control-label" name="label1" caption="First Value"></wm-label>
-                <wm-container class="col-xs-8" name="container1">
-                    <wm-text name="text1"></wm-text>
-                </wm-container>
-            </wm-composite>
-            <wm-composite name="composite2">
-                <wm-label class="col-xs-4 control-label" name="label2" caption="Second Value"></wm-label>
-                <wm-container class="col-xs-8" name="container2">
-                    <wm-text name="text2"></wm-text>
-                </wm-container>
-            </wm-composite>
-            <wm-button class="btn-default" caption="SUM" type="button" margin="unset 0.5em" name="button1" on-tap="button1Tap($event, $scope)"></wm-button>
             <wm-composite name="composite3">
+                <wm-list listclass="list-group" itemclass="list-group-item media" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" name="ThingsToDoList3" dataset="bind:Variables.lvHealthyOpsThingsToDoData.dataSet" navigation="Basic" showrecordcount="true">
+                    <wm-listtemplate layout="media" name="listtemplate2">
+                        <wm-container class="media-left" name="container7">
+                            <wm-picture class="media-object picture" shape="circle" width="40pt" name="Picture"></wm-picture>
+                        </wm-container>
+                        <wm-container class="media-body" name="container8">
+                            <wm-label caption="bind:Variables.lvHealthyOpsThingsToDoData.dataSet.taskDesc" name="Name" class="p media-heading"></wm-label>
+                            <wm-label caption="bind:Variables.lvHealthyOpsThingsToDoData.dataSet.taskCode" class="p text-muted" name="Title"></wm-label>
+                        </wm-container>
+                        <wm-container class="media-right media-top" width="20%" name="container9" horizontalalign="right">
+                            <wm-buttongroup name="buttongroup1">
+                                <wm-button class="btn-transparent edit-list-item" caption="" name="button1" iconclass="wi wi-pencil fa-2x" margin="unset 0.2em unset unset"></wm-button>
+                                <wm-button class="btn-transparent delete-list-item" caption="" name="button2" iconclass="wi wi-trash fa-2x"></wm-button>
+                            </wm-buttongroup>
+                        </wm-container>
+                    </wm-listtemplate>
+                </wm-list>
+                <wm-liveform errormessage="" title="Thingstodo Info" formlayout="dialog" iconclass="wi wi-edit" defaultmode="Edit" dataset="bind:Variables.lvHealthyOpsThingsToDoData.dataSet" captionalign="left" captionposition="top" name="liveform3" formdata="bind:Widgets.ThingsToDoList3.selecteditem"
+                    dependson="ThingsToDoList3">
+                    <wm-layoutgrid columns="1" name="layoutgrid3">
+                        <wm-gridrow name="gridrow7">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                                <wm-form-field name="taskDesc" displayname="Task Desc" show="true" primary-key="false" generator="assigned" period="false" key="taskDesc" type="text" readonly="false" required="false" widget="text" maxchars="2147483647" inputtype="text"
+                                    placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow8">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn8">
+                                <wm-form-field name="frequency" displayname="Frequency" show="true" primary-key="false" generator="assigned" period="false" key="frequency" type="integer" readonly="false" required="false" step="0" widget="number" defaultvalue="7"
+                                    inputtype="number" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow9">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                                <wm-form-field name="taskCode" displayname="Task Code" show="true" primary-key="false" generator="assigned" period="false" key="taskCode" type="string" readonly="false" required="false" widget="text" maxchars="255" inputtype="text"
+                                    placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" period="false" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="wi wi-cancel" title="Cancel" action="cancel()" disabled="false" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true"></wm-form-action>
+                    <wm-form-action key="new" display-name="New" show="true" class="form-new btn-success" iconclass="wi wi-plus" title="New" action="new()" shortcutkey="" disabled="false" type="button" update-mode="false"></wm-form-action>
+                </wm-liveform>
                 <wm-label class="col-xs-4 control-label" name="label3" caption="Result"></wm-label>
                 <wm-container class="col-xs-8" name="container3">
                     <wm-text name="text3"></wm-text>
                 </wm-container>
             </wm-composite>
-            <wm-prefab prefabname="Nvd3_Chart" name="Nvd3_Chart1"></wm-prefab>
         </wm-page-content>
     </wm-content>
     <wm-mobile-tabbar dataset="home,music,edit" name="mobile_tabbar1"></wm-mobile-tabbar>
