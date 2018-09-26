@@ -8,12 +8,29 @@ Application.$controller("RegistrationPageController", ["$scope", function($scope
          * e.g. to get value of text widget named 'username' use following script
          * '$scope.Widgets.username.datavalue'
          */
+
+
     };
+
+
 
 
     $scope.button6Tap = function($event, $isolateScope) {
         debugger;
-        AWSCognito.config.region = 'us-east-1'; //This is required to derive the endpoint
+        // var AWS = require('aws-sdk');
+
+        // AWS.config.region = 'ap-southeast-2'; // Region
+        // AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+        //     IdentityPoolId: '...'
+        // });
+
+        AWSCognito.config.region = 'ap-southeast-2';
+        // AWSCognito.config.credentials = new AWS.CognitoIdentityCredentials({
+        //     IdentityPoolId: '...'
+        // });
+
+
+        // AWSCognito.config.region = 'ap-southeast-2'; //This is required to derive the endpoint
 
         var poolData = {
             UserPoolId: 'ap-southeast-2_PQlC2fDyB',
@@ -42,7 +59,7 @@ Application.$controller("RegistrationPageController", ["$scope", function($scope
                 return;
             }
             var userData = {
-                Username: "chamiJay",
+                Username: "chamikaraj",
                 Pool: userPool
             };
             var cognitoUser = new AWSCognito.CognitoIdentityServiceProvider.CognitoUser(userData);
@@ -50,7 +67,7 @@ Application.$controller("RegistrationPageController", ["$scope", function($scope
             //Handle for On success of Signup - Navigation to Page/Verify user Page
             console.log('user name is ' + cognitoUser.getUsername());
             alert('User Created ' + cognitoUser.getUsername());
-            $scope.Variables.goToPage_Login.navigate();
+            $scope.Variables.goToPage_Login.invoke();
         });
     };
 

@@ -58,7 +58,9 @@ Application.$controller("LoginPageController", ["$scope",
 
                 onFailure: function(err) {
                     //Handle for Invalid User/Register User
+                    debugger;
                     alert(err);
+                    $scope.Variables.goToPage_Login.invoke();
                 },
                 newPasswordRequired: function() {
                     //Handle for New Password Required
