@@ -19,6 +19,10 @@
   "type" : "LEFTNAV",
   "params" : [ ]
 }, {
+  "name" : "pgDoctorsList",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "pgList",
   "type" : "PAGE",
   "params" : [ ]

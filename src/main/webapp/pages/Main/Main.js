@@ -21,6 +21,20 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
         }
     };
 
+
+    $scope.button4Tap = function($event, $isolateScope) {
+
+    };
+
+
+    $scope.label3Tap = function($event, $isolateScope) {
+        alert('Add new ?')
+        debugger;
+        $scope.Widgets.liveform3.new();
+        alert('Added ? ')
+        debugger;
+    };
+
 }]);
 
 
@@ -28,8 +42,8 @@ Application.$controller("MainPageController", ["$scope", function($scope) {
 
 
 Application.$controller("liveform3Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
 ]);

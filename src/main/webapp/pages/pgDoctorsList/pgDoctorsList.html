@@ -1,0 +1,20 @@
+<wm-page data-ng-controller="pgDoctorsListPageController" name="page1">
+    <wm-left-panel content="leftnav" name="left_panel1"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-list listclass="list-group" itemclass="list-group-item" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" datafield="All Fields" name="executeQryDoctorsListList1" dataset="bind:Variables.svDoctorsList.dataSet" navigation="Scroll">
+                <wm-listtemplate layout="inline" name="listtemplate1">
+                    <wm-container class="media-left" name="container1">
+                        <wm-picture width="32pt" height="32pt" name="Picture" shape="circle" class="media-object"></wm-picture>
+                    </wm-container>
+                    <wm-container class="media-body" name="container2">
+                        <wm-label class="p media-heading" name="Name" caption="bind:Variables.svDoctorsList.dataSet.drName" fontunit="em" padding="unset unset unset 1.25em" fontsize="1.5" color="#000000" textalign="left"></wm-label>
+                        <wm-label class="p media-heading" caption="bind:Variables.svDoctorsList.dataSet[$i].specialty1" fontunit="em" padding="unset unset unset 1.25em" fontsize="1" name="label2" color="#6c6c6c"></wm-label>
+                    </wm-container>
+                </wm-listtemplate>
+            </wm-list>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar dataset="home,star,music" name="mobile_tabbar1"></wm-mobile-tabbar>
+</wm-page>

@@ -13,6 +13,13 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/CWmwSQL/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/CognitoUPoolLogin/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -115,6 +122,7 @@
                         </goals>
                         <configuration>
                             <sources>
+                                <source>services/CWmwSQL/src</source>
                                 <source>services/CognitoUPoolLogin/src</source>
                                 <source>services/HealthyOps/src</source>
                                 <source>services/securityService/src</source>
@@ -289,6 +297,13 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.38</version>
+        </dependency>
+        <dependency>
+            <groupId>sqljdbc42</groupId>
+            <artifactId>sqljdbc42</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.lib.directory}/sqljdbc42.jar</systemPath>
         </dependency>
     </dependencies>
     <dependencyManagement>

@@ -1,0 +1,61 @@
+{
+  "qryDoctorsList" : {
+    "name" : "qryDoctorsList",
+    "description" : "Doctors List",
+    "version" : "V2",
+    "queryString" : "select substring(surname,1,1) as cFirstLetter,  surname+' '+ title+' '+ given as DrName, qualifictn, Specialty1 from doctor",
+    "countQueryString" : "select count(*) from (select substring(surname,1,1) as cFirstLetter,  surname+' '+ title+' '+ given as DrName, qualifictn, Specialty1 from doctor) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mobiwiz.cwmwsql.models.query.QryDoctorsListResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "cFirstLetter",
+        "fieldName" : "cfirstLetter",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "DrName",
+        "fieldName" : "drName",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "qualifictn",
+        "fieldName" : "qualifictn",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "Specialty1",
+        "fieldName" : "specialty1",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  }
+}

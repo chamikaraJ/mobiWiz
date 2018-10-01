@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <sql-query name="qryDoctorsList">
+        <![CDATA[
+        select substring(surname,1,1) as cFirstLetter,  surname+' '+ title+' '+ given as DrName, qualifictn, Specialty1 from doctor
+        ]]>
+    </sql-query>
+
+    <sql-query name="qryDoctorsList__count">
+        <![CDATA[
+        select count(*) from (select substring(surname,1,1) as cFirstLetter,  surname+' '+ title+' '+ given as DrName, qualifictn, Specialty1 from doctor) wmTempTable
+        ]]>
+    </sql-query>
+</hibernate-mapping>

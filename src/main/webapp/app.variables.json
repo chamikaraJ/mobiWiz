@@ -73,6 +73,17 @@
     "operation" : "gotoPage",
     "pageName" : "Main"
   },
+  "goToPage_pgDoctorsList" : {
+    "_id" : "wm-goToPage_pgDoctorsList-wm.NavigationVariable-1538405641991",
+    "name" : "goToPage_pgDoctorsList",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "pgDoctorsList",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_pgList" : {
     "_id" : "wm-goToPage_pgList-wm.NavigationVariable-1537873651591",
     "name" : "goToPage_pgList",

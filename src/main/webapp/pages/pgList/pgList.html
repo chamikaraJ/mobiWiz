@@ -1,7 +1,8 @@
 <wm-page data-ng-controller="pgListPageController" name="page1">
     <wm-content name="content1">
         <wm-page-content columnwidth="12" name="page_content1">
-            <wm-list listclass="list-group" itemclass="list-group-item media" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" name="ThingsToDoList1" dataset="bind:Variables.HealthyOpsThingsToDoData.dataSet" navigation="Basic">
+            <wm-list listclass="list-group" itemclass="list-group-item media" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" name="ThingsToDoList1" dataset="bind:Variables.HealthyOpsThingsToDoData.dataSet" navigation="Basic" showrecordcount="true"
+                title="Things To Do" on-tap="Widgets.liveform1.new()">
                 <wm-listtemplate layout="media" name="listtemplate1">
                     <wm-container class="media-left" name="container1">
                         <wm-picture class="media-object picture" shape="circle" width="40pt" name="Picture" picturesource="bind:Variables.HealthyOpsThingsToDoData.dataSet.taskCode"></wm-picture>
@@ -19,30 +20,31 @@
                 </wm-listtemplate>
             </wm-list>
             <wm-liveform errormessage="" title="Thingstodo Info" formlayout="dialog" iconclass="wi wi-edit" defaultmode="Edit" dataset="bind:Variables.HealthyOpsThingsToDoData.dataSet" captionalign="left" captionposition="top" name="liveform1" formdata="bind:Widgets.ThingsToDoList1.selecteditem"
-                dependson="ThingsToDoList1">
+                dependson="ThingsToDoList1" autocomplete="true" backgroundcolor="#000000" class="panel-info">
                 <wm-layoutgrid columns="1" name="layoutgrid1">
                     <wm-gridrow name="gridrow1">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn1">
-                            <wm-form-field name="taskDesc" displayname="Task Desc" required="false" show="true" generator="assigned" primary-key="false" key="taskDesc" type="text" is-related="false" maxchars="2147483647" pc-display="true" mobile-display="true"
-                                widget="text"></wm-form-field>
+                            <wm-form-field name="taskDesc" displayname="Task Desc" show="true" primary-key="false" generator="assigned" period="false" key="taskDesc" type="text" readonly="false" required="false" widget="text" maxchars="2147483647" inputtype="text"
+                                placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow2">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn2">
-                            <wm-form-field name="frequency" displayname="Frequency" required="false" show="true" generator="assigned" primary-key="false" key="frequency" type="integer" is-related="false" defaultvalue="7" step="0" pc-display="true" mobile-display="true"
-                                widget="number"></wm-form-field>
+                            <wm-form-field name="frequency" displayname="Frequency" show="true" primary-key="false" generator="assigned" period="false" key="frequency" type="integer" readonly="false" required="false" step="0" widget="number" defaultvalue="7"
+                                inputtype="number" placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow3">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn3">
-                            <wm-form-field name="taskCode" displayname="Task Code" required="false" show="true" generator="assigned" primary-key="false" key="taskCode" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true"
-                                widget="text"></wm-form-field>
+                            <wm-form-field name="taskCode" displayname="Task Code" show="true" primary-key="false" generator="assigned" period="false" key="taskCode" type="string" readonly="false" required="false" widget="text" maxchars="255" inputtype="text"
+                                placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                 </wm-layoutgrid>
-                <wm-form-field name="id" displayname="Id" required="true" show="false" generator="identity" primary-key="true" key="id" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
-                <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
-                <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+                <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" period="false" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="wi wi-cancel" title="Cancel" action="cancel()" disabled="false" type="button" update-mode="true"></wm-form-action>
+                <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true"></wm-form-action>
+                <wm-form-action key="new" display-name="New" show="true" class="form-new btn-success" iconclass="wi wi-plus" title="New" action="new()" accessroles="admin,user" shortcutkey="+" disabled="false" type="button" update-mode="false"></wm-form-action>
             </wm-liveform>
         </wm-page-content>
     </wm-content>
