@@ -11,6 +11,10 @@
   "type" : "PAGE",
   "params" : [ ]
 }, {
+  "name" : "PgPatientRegForm",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "Registration",
   "type" : "PAGE",
   "params" : [ ]

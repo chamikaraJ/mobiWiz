@@ -95,6 +95,17 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
+  "goToPage_PgPatientRegForm" : {
+    "_id" : "wm-goToPage_PgPatientRegForm-wm.NavigationVariable-1538462826351",
+    "name" : "goToPage_PgPatientRegForm",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "PgPatientRegForm",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_Registration" : {
     "_id" : "wm-goToPage_Registration-wm.NavigationVariable-1537867108763",
     "name" : "goToPage_Registration",
