@@ -54,6 +54,7 @@ Application.$controller("LoginPageController", ["$scope",
                     $scope.Variables.cognitoLogin.dataBinding.username = result.getAccessToken().getJwtToken();
                     $scope.Variables.cognitoLogin.dataBinding.password = result.idToken.jwtToken;
                     $scope.Variables.cognitoLogin.login();
+                    $scope.Variables.goToPage_pgList.invoke();
                 },
 
                 onFailure: function(err) {
@@ -68,7 +69,6 @@ Application.$controller("LoginPageController", ["$scope",
 
             });
         };
-
     }
 ]);
 

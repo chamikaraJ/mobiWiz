@@ -13,7 +13,7 @@ Application.$controller("pgListPageController", ["$scope", function($scope) {
          * '$scope.Widgets.username.datavalue'
          */
         alert('start');
-        $scope.Widgets.liveform1.new()
+        // $scope.Widgets.liveform1.new()
         alert('done');
 
     };
@@ -33,6 +33,11 @@ Application.$controller("pgListPageController", ["$scope", function($scope) {
 
         }
 
+    };
+
+
+    $scope.btnAddTap = function($event, $isolateScope) {
+        $scope.$root.$emit('wm-event', 'ThingsToDoList1', 'create');
     };
 
 }]);
