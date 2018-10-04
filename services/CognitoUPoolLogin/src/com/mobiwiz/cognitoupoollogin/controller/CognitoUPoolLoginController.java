@@ -23,6 +23,8 @@ public class CognitoUPoolLoginController {
     private CognitoUPoolLogin cognitoUPoolLogin;
 
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "")
     public WMUser authenticate(@RequestBody AuthRequestContext authRequestContext) {
         return cognitoUPoolLogin.authenticate(authRequestContext);
     }

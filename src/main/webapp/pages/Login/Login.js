@@ -15,7 +15,6 @@ Application.$controller("LoginPageController", ["$scope",
         };
 
         $scope.loginButtonTap = function($event, $isolateScope) {
-            debugger;
             //Creating  authentication data object
             var authenticationData = {
                 Username: $scope.Widgets.usernametext.datavalue,
@@ -38,7 +37,7 @@ Application.$controller("LoginPageController", ["$scope",
             //handle the new password 
             function newPasswordRequired() {
                 //Write logic here
-                alert("New Password Required");
+                // alert("New Password Required");
                 AWS.config.region = 'ap-southeast-2';
                 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
                     IdentityPoolId: 'ap-southeast-2:0bf0ab2c-c013-4617-be40-e587d29a1c49'
@@ -54,12 +53,11 @@ Application.$controller("LoginPageController", ["$scope",
                     $scope.Variables.cognitoLogin.dataBinding.username = result.getAccessToken().getJwtToken();
                     $scope.Variables.cognitoLogin.dataBinding.password = result.idToken.jwtToken;
                     $scope.Variables.cognitoLogin.login();
-                    $scope.Variables.goToPage_pgList.invoke();
+                    // $scope.Variables.goToPage_pgList.invoke();
                 },
 
                 onFailure: function(err) {
                     //Handle for Invalid User/Register User
-                    debugger;
                     alert(err);
                     $scope.Variables.goToPage_Login.invoke();
                 },

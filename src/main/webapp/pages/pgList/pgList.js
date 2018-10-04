@@ -12,25 +12,16 @@ Application.$controller("pgListPageController", ["$scope", function($scope) {
          * e.g. to get value of text widget named 'username' use following script
          * '$scope.Widgets.username.datavalue'
          */
-        alert('start');
         // $scope.Widgets.liveform1.new()
-        alert('done');
 
     };
 
     ;
 
     $scope.HealthyOpsThingsToDoDataonResult = function(variable, data, options) {
-        alert('in result');
 
         if (data.length == 1) {
-            alert('ready');
-            debugger;
-            alert('Add new');
             // $scope.Variables.HealthyOpsThingsToDoData.createRecord();
-
-
-
         }
 
     };
