@@ -307,16 +307,16 @@
             <version>5.1.38</version>
         </dependency>
         <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-google</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+        <dependency>
             <groupId>sqljdbc42</groupId>
             <artifactId>sqljdbc42</artifactId>
             <version>1.0</version>
             <scope>system</scope>
             <systemPath>${project.lib.directory}/sqljdbc42.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.social</groupId>
-            <artifactId>spring-social-google</artifactId>
-            <version>1.0.0.RELEASE</version>
         </dependency>
     </dependencies>
     <dependencyManagement>

@@ -29,8 +29,11 @@ Application.$controller("PgPatientRegFormPageController", ["$scope", function($s
                 country: 'au'
             }
         };
+        debugger;
+
         var autocomplete, autocomplete2, autocomplete3, autocomplete4, autocomplete5, autocomplete6, autocomplete7;
         if (typeof google === "undefined") {
+            debugger;
             $.getScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyAnsXUumRPOBcoNyNA-RiPIMSQnni_M_xw&libraries=places').done(function() {
                 autocomplete = new google.maps.places.Autocomplete($('[name=address1_formWidget')[0], options);
 
