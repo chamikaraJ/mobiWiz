@@ -5,7 +5,7 @@ Application.$controller("PgPatientRegFormPageController", ["$scope", function($s
     $scope.onPageReady = function() {
 
 
-
+        debugger;
 
         //Set Year List from this year to 1900
         var thisYear = new Date().getFullYear();

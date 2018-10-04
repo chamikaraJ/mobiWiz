@@ -1,1 +1,28 @@
-{ }
+{
+  "stvYearList" : {
+    "_id" : "wm-stvYearList-wm.Variable-1538627028764",
+    "name" : "stvYearList",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "dataValue" : 0
+    } ],
+    "type" : "number",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "stvYearListPlusTenYears" : {
+    "_id" : "wm-stvYearListPlusTenYears-wm.Variable-1538627060207",
+    "name" : "stvYearListPlusTenYears",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "dataValue" : 0
+    } ],
+    "type" : "number",
+    "isList" : true,
+    "saveInPhonegap" : false
+  }
+}

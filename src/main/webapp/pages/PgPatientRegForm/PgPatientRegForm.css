@@ -101,3 +101,6 @@ input[type=radio] {
     font-family: 'robotoregular', 'Arial', sans-serif;
 
 }
+.text-justify{
+    text-align: justify;
+}
