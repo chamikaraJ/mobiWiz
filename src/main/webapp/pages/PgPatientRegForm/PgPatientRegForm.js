@@ -14,6 +14,7 @@ Application.$controller("PgPatientRegFormPageController", ["$scope", function($s
             penColor: "rgb(66, 133, 244)",
             onEnd: function() {
                 // $scope.Widgets.dischargeNurseSigText.datavalue = JSON.stringify(signaturePad.toData());
+                $scope.Variables.stvBase64ImageUrl.dataSet.dataValue = signaturePad.toDataURL();
             }
         });
 
@@ -504,7 +505,7 @@ Application.$controller("PgPatientRegFormPageController", ["$scope", function($s
 
 
     $scope.btnSubmitTap = function($event, $isolateScope) {
-        $scope.Variables.stvBase64ImageUrl.dataSet.dataValue = signaturePad.toDataURL();
+        // $scope.Variables.stvBase64ImageUrl.dataSet.dataValue = signaturePad.toDataURL();
         $scope.Variables.svSaveSignatureAsImage.invoke();
     };
 

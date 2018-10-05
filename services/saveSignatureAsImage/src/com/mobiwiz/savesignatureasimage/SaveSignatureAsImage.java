@@ -52,7 +52,7 @@ public class SaveSignatureAsImage {
     }
     
     public void saveSignature(String base64ImageUrl, String firstName, String lastName, HttpServletRequest request) throws Exception{
-        
+        if(base64ImageUrl !=null){
         String uploadDir = getArchivePath(request.getServletContext().getServletContextName());
         
         String filenme = generateFileName(firstName, lastName)+"_signature.png";
@@ -63,6 +63,7 @@ public class SaveSignatureAsImage {
         FileOutputStream fos = new FileOutputStream(outputFile);
         fos.write(decodedByte);
         fos.close();
+        }
     }
     
         private String generateFileName(String firstname, String surname) {
