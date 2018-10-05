@@ -507,6 +507,17 @@ Application.$controller("PgPatientRegFormPageController", ["$scope", function($s
         debugger;
         $scope.Variables.stvBase64ImageUrl.dataSet.dataValue = signaturePad.toDataURL();
         debugger;
+        $scope.Variables.stvBase64ImageUrl.invoke();
+    };
+
+
+    $scope.svSaveSignatureAsImageonSuccess = function(variable, data, options) {
+        alert("image saved");
+    };
+
+
+    $scope.svSaveSignatureAsImageonError = function(variable, data, options) {
+        alert("image saving failed");
     };
 
 }]);

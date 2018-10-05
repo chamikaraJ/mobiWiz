@@ -37,5 +37,42 @@
     "type" : "number",
     "isList" : true,
     "saveInPhonegap" : false
+  },
+  "svSaveSignatureAsImage" : {
+    "_id" : "wm-svSaveSignatureAsImage-wm.ServiceVariable-1538732789759",
+    "name" : "svSaveSignatureAsImage",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "base64ImageUrl",
+      "value" : "bind:Variables.stvBase64ImageUrl.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "firstName",
+      "value" : "Chamikara",
+      "type" : "string"
+    }, {
+      "target" : "lastName",
+      "value" : "Jayasinghe",
+      "type" : "string"
+    } ],
+    "type" : "object",
+    "service" : "saveSignatureAsImage",
+    "operation" : "saveSignature",
+    "operationId" : "SaveSignatureAsImageController_saveSignature",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "svSaveSignatureAsImageonSuccess($event, $scope)",
+    "onError" : "svSaveSignatureAsImageonError($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "SaveSignatureAsImage",
+    "spinnerContext" : "page"
   }
 }
