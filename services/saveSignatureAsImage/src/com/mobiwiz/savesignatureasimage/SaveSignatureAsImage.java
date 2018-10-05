@@ -55,9 +55,12 @@ public class SaveSignatureAsImage {
         
         String uploadDir = getArchivePath(request.getServletContext().getServletContextName());
         
+        String filenme = generateFileName(firstName, lastName)+"_signature.png";
+        String outputFile = uploadDir + "/" + filenme;
+        
          Decoder decoder = Base64.getDecoder();
         byte[] decodedByte = decoder.decode(base64ImageUrl.split(",")[1]);
-        FileOutputStream fos = new FileOutputStream("MyAudio.webm");
+        FileOutputStream fos = new FileOutputStream(outputFile);
         fos.write(decodedByte);
         fos.close();
     }
