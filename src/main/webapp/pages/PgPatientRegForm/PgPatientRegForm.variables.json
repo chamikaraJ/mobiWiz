@@ -1,4 +1,17 @@
 {
+  "stvBase64ImageUrl" : {
+    "_id" : "wm-stvBase64ImageUrl-wm.Variable-1538719788643",
+    "name" : "stvBase64ImageUrl",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
   "stvYearList" : {
     "_id" : "wm-stvYearList-wm.Variable-1538627028764",
     "name" : "stvYearList",

@@ -1,11 +1,73 @@
 Application.$controller("PgPatientRegFormPageController", ["$scope", function($scope) {
     "use strict";
 
+    var signaturePad;
     /* perform any action on widgets/variables within this block */
     $scope.onPageReady = function() {
 
+        ///////////// Signature Pad Start///////////////
 
-        debugger;
+        var canvas = document.querySelector("canvas");
+        signaturePad = new SignaturePad(canvas, {
+            minWidth: 1,
+            maxWidth: 1,
+            penColor: "rgb(66, 133, 244)",
+            onEnd: function() {
+                // $scope.Widgets.dischargeNurseSigText.datavalue = JSON.stringify(signaturePad.toData());
+            }
+        });
+
+        function resizeCanvas() {
+            var ratio = Math.max(window.devicePixelRatio || 1, 1);
+            canvas.width = canvas.offsetWidth * ratio;
+            canvas.height = canvas.offsetHeight * ratio;
+            // canvas.width = 310 * ratio;
+            // canvas.height = 415 * ratio;
+            canvas.getContext("2d").scale(ratio, ratio);
+            signaturePad.clear(); // otherwise isEmpty() might return incorrect value
+        }
+
+        window.addEventListener("resize", resizeCanvas);
+        resizeCanvas();
+
+        var wrapper = document.getElementById("signature-pad");
+        var clearButton = wrapper.querySelector("[data-action=clear]");
+        // var changeColorButton = wrapper.querySelector("[data-action=change-color]");
+        var undoButton = wrapper.querySelector("[data-action=undo]");
+        clearButton.addEventListener("click", function(event) {
+            signaturePad.clear();
+            // $scope.Widgets.dischargeNurseSigText.datavalue = '';
+        });
+        undoButton.addEventListener("click", function(event) {
+            var data = signaturePad.toData();
+
+            if (data) {
+                data.pop(); // remove the last dot or line
+                signaturePad.fromData(data);
+                // $scope.Widgets.dischargeNurseSigText.datavalue = data;
+            }
+        });
+
+        // function download(dataURL, filename) {
+        //     if (navigator.userAgent.indexOf("Safari") > -1 && navigator.userAgent.indexOf("Chrome") === -1) {
+        //         window.open(dataURL);
+        //     } else {
+        //         var blob = dataURLToBlob(dataURL);
+        //         var url = window.URL.createObjectURL(blob);
+
+        //         var a = document.createElement("a");
+        //         a.style = "display: none";
+        //         a.href = url;
+        //         a.download = filename;
+
+        //         document.body.appendChild(a);
+        //         a.click();
+
+        //         window.URL.revokeObjectURL(url);
+        //     }
+        // }
+
+        ///////////// Signature Pad End///////////////
 
         //Set Year List from this year to 1900
         var thisYear = new Date().getFullYear();
@@ -436,6 +498,15 @@ Application.$controller("PgPatientRegFormPageController", ["$scope", function($s
             autocomplete7 = new google.maps.places.Autocomplete($('[name=txtAddress7_formWidget]')[0]);
         }
 
+    };
+
+
+
+
+    $scope.btnSubmitTap = function($event, $isolateScope) {
+        debugger;
+        $scope.Variables.stvBase64ImageUrl.dataSet.dataValue = signaturePad.toDataURL();
+        debugger;
     };
 
 }]);

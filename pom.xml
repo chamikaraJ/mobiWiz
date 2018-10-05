@@ -41,6 +41,13 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/saveSignatureAsImage/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/securityService/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -133,6 +140,7 @@
                                 <source>services/CognitoUPoolLogin/src</source>
                                 <source>services/HealthyOps/src</source>
                                 <source>services/MyAuthenticationManager/src</source>
+                                <source>services/saveSignatureAsImage/src</source>
                                 <source>services/securityService/src</source>
                             </sources>
                         </configuration>
@@ -318,6 +326,12 @@
             <scope>system</scope>
             <systemPath>${project.lib.directory}/sqljdbc42.jar</systemPath>
         </dependency>
+<!--        <dependency>-->
+<!--    <groupId>commons-codec</groupId>-->
+<!--    <artifactId>commons-codec</artifactId>-->
+<!--    <version>1.9</version>-->
+<!--</dependency>-->
+
     </dependencies>
     <dependencyManagement>
         <dependencies>

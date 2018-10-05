@@ -545,19 +545,26 @@
                             </wm-container>
                             <wm-layoutgrid name="layoutgrid68_1">
                                 <wm-gridrow name="gridrow154_4">
-                                    <wm-gridcolumn columnwidth="2" name="gridcolumn464_4"></wm-gridcolumn>
-                                    <wm-gridcolumn columnwidth="2" name="gridcolumn465_4">
-                                        <wm-form-field widget="checkbox" show="true" type="custom" name="chkAgreetheTermsAbove"></wm-form-field>
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn465_4" horizontalalign="center">
+                                        <wm-form-field widget="checkbox" show="true" type="custom" name="chkAgreetheTermsAbove" caption="I Agree to the Terms Above"></wm-form-field>
                                     </wm-gridcolumn>
-                                    <wm-gridcolumn columnwidth="4" name="gridcolumn459_5">
-                                        <wm-label padding="unset 0.5em" name="lblAgreetheTermsAbove" caption="I Agree to the Terms Above"></wm-label>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow73">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn131_1">
+                                        <wm-container name="container8" height="200" show="true" animation="zoomInDown">
+                                            <div class="signature-pad" id="signature-pad" width="200" height="200">
+                                                <div class="signature-pad--body"><canvas width="200" height="200"></canvas></div>
+                                                <div class="signature-pad--actions">
+                                                    <div style="margin:auto"><button class="button clear" type="button" data-action="clear">Clear</button><button class="button" type="button" data-action="undo">Undo</button></div>
+                                                </div>
+                                            </div>
+                                        </wm-container>
                                     </wm-gridcolumn>
-                                    <wm-gridcolumn columnwidth="2" name="gridcolumn351"></wm-gridcolumn>
                                 </wm-gridrow>
                                 <wm-gridrow name="gridrow155">
-                                    <wm-gridcolumn columnwidth="12" name="gridcolumn461_5">
-                                        <wm-button class="btn-default no-border" caption="Submit" type="submit" margin="unset 0.5em unset 60em" name="btnSubmit" textalign="center" show="bind:Widgets.pgPatientPortal.formWidgets.chkAgreetheTermsAbove.datavalue"
-                                            animation="fadeIn" backgroundcolor="#00a79b" bordercolor="#000000" color="#fff" on-click="Variables.svCreateCSV.invoke()"></wm-button>
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn461_5" horizontalalign="center" padding="1em unset unset unset">
+                                        <wm-button class="btn-default no-border" caption="Submit" type="submit" margin="unset 0.5em" name="btnSubmit" textalign="center" show="bind:Widgets.pgPatientPortal.formWidgets.chkAgreetheTermsAbove.datavalue" animation="fadeIn"
+                                            backgroundcolor="#00a79b" bordercolor="#000000" color="#fff" on-click="Variables.svCreateCSV.invoke()" on-tap="btnSubmitTap($event, $scope)"></wm-button>
                                     </wm-gridcolumn>
                                 </wm-gridrow>
                                 <wm-gridrow name="gridrow118_1">
