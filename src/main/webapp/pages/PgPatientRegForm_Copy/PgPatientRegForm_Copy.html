@@ -1,0 +1,546 @@
+<wm-page data-ng-controller="PgPatientRegForm_CopyPageController" name="page1">
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.MwpportalCreatePtdetail.dataSet" captionalign="left" name="pgPatientPortal" margin="unset unset 15px unset">
+                <wm-layoutgrid name="layoutgridPatient" columns="1" class="page-background">
+                    <wm-gridrow name="gridrow71">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn129" horizontalalign="center">
+                            <wm-container width="100%" height="100%" color="#ffffff" backgroundcolor="#ffffff" padding="1em unset 1.5em unset" name="container6">
+                                <wm-picture picturesource="resources/images/imagelists/OrthoSA.jpg" height="100%" width="25%" showindevice="lg" name="picture4_1"></wm-picture>
+                            </wm-container>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow128_1">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn130_1" horizontalalign="center">
+                            <wm-container name="container5_1" width="100%" height="100%" color="#ffffff" backgroundcolor="#ffffff" padding="1em unset 1.5em unset">
+                                <wm-picture name="picture4" picturesource="resources/images/imagelists/OrthoSA.jpg" height="100%" width="90%" showindevice="xs,sm,md"></wm-picture>
+                            </wm-container>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow129_1">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn131">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn439_3">
+                                <wm-container name="container4">
+                                    <wm-label padding="0.7em 0.5em 0.7em 1.5em" caption="Personal Details" class="h2 formLabel" name="lblPersonalDetails" color="#ffffff" fontsize="18" textalign="center" fontweight="bold" backgroundcolor="#00a79b"></wm-label>
+                                </wm-container>
+                            </wm-gridcolumn>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow121_1">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn125">
+                            <wm-panel iconclass="" autoclose="outsideClick" title="" name="panel1">
+                                <wm-label padding="0.7em 0.5em 0.7em 1.5em" caption="Personal Details" class="h2 formLabel" color="#ffffff" fontsize="18" textalign="center" fontweight="bold" backgroundcolor="#00a79b" name="label61_1"></wm-label>
+                                <wm-container name="container9" class="content-center" horizontalalign="left" padding="unset unset 50px unset">
+                                    <wm-label padding="unset 0.5em unset unset" caption="Title:" required="true" margin="unset unset unset 1px" name="lblTitle" fontsize="1.5" fontunit="em" class="col-md-2 col-xs-12"></wm-label>
+                                    <wm-form-field widget="select" show="true" type="custom" name="sltTitle" dataset="Mr,Mrs,Miss,Master,Dr,Professor,Father,Brother,Sister,Mother" required="true" fontunit="em" fontsize="1.5" class="col-md-8 col-xs-12"></wm-form-field>
+                                    <wm-label padding="unset 0.5em unset unset" name="lblFirstName" caption="Given Name" required="true" margin="unset unset unset 1px" fontsize="1.5" fontunit="em" class="col-md-2 col-xs-12"></wm-label>
+                                    <wm-form-field widget="text" show="true" type="custom" name="txtFirstName5" required="true" fontunit="em" fontsize="1.5" class="col-md-8 col-xs-12"></wm-form-field>
+                                    <wm-label padding="unset 0.5em unset unset" name="lblSurname" caption="Surname" required="true" margin="unset unset unset 1px" fontsize="1.5" fontunit="em" class="col-md-2 col-xs-12"></wm-label>
+                                    <wm-form-field widget="text" show="true" type="custom" name="txtSurname5" required="true" fontsize="1.5" fontunit="em" class="col-md-8 col-xs-12"></wm-form-field>
+                                    <wm-label name="lblMiddleName" required="false" caption="Middle Name" margin="unset unset unset 1px" fontsize="1.5" fontunit="em" class="col-md-2 col-xs-12"></wm-label>
+                                    <wm-form-field widget="text" show="true" type="custom" name="txtMiddleName" fontunit="em" fontsize="1.5" class="col-md-8 col-xs-12"></wm-form-field>
+                                    <wm-label name="lblPreferredName" caption="Preferred Name" margin="unset unset unset 1px" fontsize="1.5" fontunit="em" class="col-md-2 col-xs-12"></wm-label>
+                                    <wm-form-field widget="text" show="true" type="custom" name="txtPreferredName" fontsize="1.5" fontunit="em" class="col-md-8 col-xs-12"></wm-form-field>
+                                    <wm-label caption="D.O.B" margin="unset unset unset 1px" fontsize="1.5" fontunit="em" name="label61_2" required="true" class="col-md-2 col-xs-12"></wm-label>
+                                    <wm-layoutgrid name="layoutgrid3" columns="4">
+                                        <wm-gridrow name="gridrow119_1" class="col-md-8 col-xs-12">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn359">
+                                                <wm-form-field widget="select" show="true" type="custom" name="dobDay" dataset="1	,2	,3	,4	,5	,6	,7	,8	,9	,10	,11	,12	,13	,14	,15	,16	,17	,18	,19	,20	,21	,22	,23	,24	,25	,26	,27	,28	,29	,30	,31" on-change="dobDayChange($event, $scope, newVal, oldVal)"
+                                                    margin="unset 50px unset unset" placeholder="D" required="true" fontsize="11"></wm-form-field>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn360">
+                                                <wm-form-field widget="select" show="true" type="custom" name="dobMonth" dataset="1,2,3,4,5,6,7,8,9,10,11,12" placeholder="M" required="true" fontsize="11"></wm-form-field>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn361">
+                                                <wm-form-field widget="select" show="true" type="custom" name="dobYear" dataset="bind:Variables.stvYearList.dataSet" placeholder="Y" required="true" on-change="dobYearChange($event, $scope, newVal, oldVal)" datafield="dataValue" displayfield="dataValue"
+                                                    fontsize="11"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                    <wm-label caption="AGE" margin="unset unset unset 1px" fontsize="1.5" fontunit="em" name="label62_1" required="true" class="col-md-2 col-xs-12"></wm-label>
+                                    <wm-form-field widget="text" show="true" type="custom" placeholder="" name="txtAge" class="col-md-8 col-xs-12"></wm-form-field>
+                                    <wm-label caption="Address" margin="unset unset unset 1px" fontsize="1.5" fontunit="em" name="label63" required="true" class="col-md-2 col-xs-12"></wm-label>
+                                    <wm-form-field widget="text" show="true" type="custom" name="address1" placeholder="Enter your address here" required="true" class="col-md-8 col-xs-12"></wm-form-field>
+
+                                    <wm-container name="container11">
+                                        <wm-layoutgrid name="layoutgrid13">
+                                            <wm-gridrow name="gridrow69_1">
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn124_1">
+                                                    <wm-form-field widget="text" show="true" type="custom" name="address2" placeholder="House Number" backgroundcolor="#E0E0E0"></wm-form-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn125_2">
+                                                    <wm-form-field widget="text" show="true" type="custom" placeholder="Street Name" backgroundcolor="#E0E0E0" name="streetname"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow70_1">
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn126_1">
+                                                    <wm-form-field widget="text" show="true" type="custom" name="suburb" placeholder="Suburb" backgroundcolor="#E0E0E0"></wm-form-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn127_1">
+                                                    <wm-form-field widget="text" show="true" type="custom" name="state" placeholder="State" backgroundcolor="#E0E0E0"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow71_1">
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn128_1">
+                                                    <wm-form-field widget="text" show="true" type="custom" name="postcode" placeholder="Post Code" backgroundcolor="#E0E0E0"></wm-form-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn129_1">
+                                                    <wm-form-field widget="text" show="true" type="custom" placeholder="country" backgroundcolor="#E0E0E0" name="country"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-container>
+                                    <wm-label padding="unset 0.5em unset unset" name="lblPhoneNumberH" caption="Phone Number (H)" class="col-md-2 col-xs-12"></wm-label>
+                                    <wm-form-field widget="text" show="true" type="custom" placeholder="(##) ####-####" name="txtPhoneNumberH" class="col-md-8 col-xs-12"></wm-form-field>
+                                    <wm-label padding="unset 0.5em unset unset" name="lblPhoneNumberW" caption="Phone Number (W)" class="col-md-2 col-xs-12"></wm-label>
+                                    <wm-form-field widget="text" show="true" type="custom" placeholder="(##) ####-####" name="txtPhoneNumberW" class="col-md-8 col-xs-12"></wm-form-field>
+
+                                    <wm-label padding="unset 0.5em unset unset" name="label105" caption="DO YOU HAVE PRIVATE HOSPITAL COVER" class="col-md-2 col-xs-12"></wm-label>
+                                    <wm-form-field widget="radioset" show="true" type="custom" dataset="Yes,No" layout="inline" name="rdoPrivateHospitalCover" class="col-md-8 col-xs-12"></wm-form-field>
+
+                                    <wm-container name="container34_1" show="bind:Widgets.pgPatientPortal.formWidgets.rdoPrivateHospitalCover.datavalue=='Yes'">
+
+                                        <wm-layoutgrid name="layoutgrid52_1">
+                                            <wm-gridrow name="gridrow129">
+                                                <wm-gridcolumn columnwidth="4" name="gridcolumn355">
+                                                    <wm-label padding="unset 0.5em" caption="JOINED FUND - YEAR" name="label106"></wm-label>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="8" name="gridcolumn356">
+                                                    <wm-form-field widget="select" show="true" type="custom" dataset="bind:Variables.stvYearList.dataSet" placeholder="Year" required="false" on-change="dobYearChange($event, $scope, newVal, oldVal)" datafield="dataValue" displayfield="dataValue" fontsize="11"
+                                                        name="form_field176"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow130">
+                                                <wm-gridcolumn columnwidth="4" name="gridcolumn357">
+                                                    <wm-label padding="unset 0.5em" caption="FUND NAME:" name="label107"></wm-label>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="8" name="gridcolumn358">
+                                                    <wm-form-field widget="text" show="true" type="custom" placeholder="" name="form_field91"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow131_1">
+                                                <wm-gridcolumn columnwidth="4" name="gridcolumn359_1">
+                                                    <wm-label padding="unset 0.5em" caption="MEMBERSHIP NO:" name="label108"></wm-label>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="8" name="gridcolumn360_1">
+                                                    <wm-form-field widget="text" show="true" type="custom" placeholder="" name="form_field92"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-container>
+
+                                    <wm-form-field widget="text" show="true" type="custom" placeholder="ex: myname@example.com" name="txtEmail" inputtype="email" class="col-md-8 col-xs-12"></wm-form-field>
+                                    <wm-label padding="unset 0.5em unset unset" name="lblMobieNo" caption="Mobile No" class="col-md-2 col-xs-12"></wm-label>
+                                    <wm-label padding="unset 0.5em unset unset" name="lblEmail" caption="E-mail" class="col-md-2 col-xs-12"></wm-label>
+                                </wm-container>
+                                <wm-form-field widget="text" show="true" type="custom" placeholder="(##) ####-####" name="txtMobileNo" class="col-md-8 col-xs-12"></wm-form-field>
+                            </wm-panel>
+                            <wm-layoutgrid name="layoutgrid45"></wm-layoutgrid>
+                            <wm-layoutgrid name="layoutgrid57">
+                                <wm-gridrow name="gridrow124">
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn347"></wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="8" name="gridcolumn348"></wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow125">
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn349_1"></wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="8" name="gridcolumn350_1"></wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow126" padding="10px unset unset unset">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn351_1" padding="10px unset unset unset"></wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow127">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn353"></wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow128">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn354"></wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow90">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn223">
+                                        <wm-label padding="0.7em 0.5em 0.7em 1em" caption="Medicare And Fund Details" class="h2 formLabel" color="#ffffff" fontsize="18" fontweight="bold" textalign="center" bordercolor="#00456b" backgroundcolor="#00a79b" name="label74"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow80">
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn202">
+                                        <wm-label padding="unset 0.5em" caption="Medicare Card Number." name="label69"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="8" name="gridcolumn205">
+                                        <wm-form-field widget="text" show="true" type="custom" placeholder="" name="form_field93"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow81">
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn203">
+                                        <wm-label padding="unset 0.5em" caption="M.Ref No:" name="label70"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="8" name="gridcolumn206">
+                                        <wm-form-field widget="text" show="true" type="custom" placeholder="" name="form_field94"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow82">
+                                    <wm-gridcolumn columnwidth="3" name="gridcolumn204">
+                                        <wm-label padding="unset 0.5em" caption="Medicare Expiry Date" name="label71"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="9" name="gridcolumn207">
+                                        <wm-layoutgrid name="layoutgrid31">
+                                            <wm-gridrow padding="unset unset unset -1px" name="gridrow83">
+                                                <wm-gridcolumn columnwidth="4" name="gridcolumn208">
+                                                    <wm-form-field widget="select" show="true" type="custom" dataset="1	,2	,3	,4	,5	,6	,7	,8	,9	,10	,11	,12	,13	,14	,15	,16	,17	,18	,19	,20	,21	,22	,23	,24	,25	,26	,27	,28	,29	,30	,31" on-change="dobDayChange($event, $scope, newVal, oldVal)" margin="unset 50px unset unset"
+                                                        placeholder="D" name="form_field95"></wm-form-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="4" name="gridcolumn209">
+                                                    <wm-form-field widget="select" show="true" type="custom" dataset="1,2,3,4,5,6,7,8,9,10,11,12" on-change="dobDayChange($event, $scope, newVal, oldVal)" margin="unset 50px unset unset" placeholder="M" name="form_field96"></wm-form-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="4" name="gridcolumn210">
+                                                    <wm-form-field widget="select" show="true" type="custom" dataset="bind:Variables.stvYearListPlusTenYears.dataSet" placeholder="Y" datafield="dataValue" displayfield="dataValue" name="form_field97"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow88">
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn219_1">
+                                        <wm-label padding="unset 0.5em" caption="DVA Gold Card Holder" name="label72"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="8" name="gridcolumn220">
+                                        <wm-form-field widget="radioset" show="true" type="custom" dataset="Yes,No" layout="inline" name="form_field98"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow89">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn222">
+                                        <wm-label padding="unset 0.5em" caption="DVA Card No." name="label73"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn221">
+                                        <wm-form-field widget="text" show="true" type="custom" placeholder="" name="txtDvaCardNo"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow91">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn225">
+                                        <wm-label padding="unset 0.5em" caption="Family Doctor (GP):" name="label75"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn226">
+                                        <wm-form-field widget="text" show="true" type="custom" placeholder="" name="txtFamilyDoctor"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow95">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn233"></wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn234">
+                                        <wm-form-field widget="text" show="true" type="custom" placeholder="SUBURB" name="form_field102"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow92">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn227">
+                                        <wm-label padding="unset 0.5em" caption="Referring Doctor:" name="label76"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn228">
+                                        <wm-form-field widget="text" show="true" type="custom" placeholder="" name="txtReferringDoctor"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow94">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn231"></wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn232">
+                                        <wm-form-field widget="text" show="true" type="custom" placeholder="SUBURB" name="form_field104"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow96">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn235">
+                                        <wm-label padding="unset 0.5em" caption="How Did You Hear About Orthopaedics Sa??" name="label77"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn236">
+                                        <wm-form-field widget="select" show="true" type="custom" dataset="GP,Previous Patient,Family/Friend,Yellow Pages,White Pages,Clinic Website,Google,Social Media,True Local,Bowls Club,RSL club,Attend A Talk,Local Paper,Other,email from DHC" name="sltHowdidYouHear"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow131">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn133" padding="unset unset 50px unset">
+                            <wm-container name="containerContactdetails" show="true">
+                                <wm-container name="container5" animation="fadeIn" show="true">
+                                    <wm-label padding="0.7em 0.5em 0.7em 1.5em" caption="Next of Kin" class="h2 formLabel" color="#ffffff" fontsize="18" textalign="center" fontweight="bold" name="lblNextOfKinorCarer" backgroundcolor="#00a79b"></wm-label>
+                                    <wm-layoutgrid name="layoutgrid51_1">
+                                        <wm-gridrow name="gridrow130_1">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn256_2">
+                                                <wm-label padding="unset 0.5em" name="lblName" caption="Name"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="5" name="gridcolumn257_2">
+                                                <wm-form-field widget="text" show="true" type="custom" placeholder="First Name" name="txtFirstName"></wm-form-field>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="3" name="gridcolumn260">
+                                                <wm-form-field widget="text" show="true" type="custom" placeholder="Last Name" name="txtLastName"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow131_2">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn268">
+                                                <wm-label padding="unset 0.5em" name="lblRelationship" caption="Relationship to Patient"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="8" name="gridcolumn258">
+                                                <wm-form-field widget="select" show="true" type="custom" dataset="Father,Mother,Brother,Sister, Spouse,Friend,Child,Other" name="slcRelationship"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                    <wm-layoutgrid name="layoutgrid52">
+                                        <wm-gridrow name="gridrow132_1">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn262">
+                                                <wm-label padding="unset 0.5em" caption="Contact Ph:" name="lblMobileNoKinOrCarer"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="8" name="gridcolumn263">
+                                                <wm-form-field widget="text" show="true" type="custom" placeholder="(##) ####-####" name="txtContctNo" inputtype="tel"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow97">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn238">
+                                                <wm-label padding="unset 0.5em" caption="If Patient is a Child" name="label78" fontweight="bold"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow99">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn241">
+                                                <wm-label padding="unset 0.5em" caption="Mother / Father / Guardian's Full Name:" name="label80"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn242">
+                                                <wm-form-field widget="text" show="true" type="custom" placeholder="First Name" name="form_field106"></wm-form-field>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn243">
+                                                <wm-form-field widget="text" show="true" type="custom" placeholder="Last Name" name="form_field107"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow98">
+                                            <wm-gridcolumn columnwidth="3" name="gridcolumn239">
+                                                <wm-label padding="10px 0.5px unset 10px" caption="D.O.B" required="false" fontsize="11" name="label81"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="9" name="gridcolumn240">
+                                                <wm-layoutgrid name="layoutgrid32">
+                                                    <wm-gridrow padding="unset unset unset -1px" name="gridrow100">
+                                                        <wm-gridcolumn columnwidth="4" name="gridcolumn244">
+                                                            <wm-form-field widget="select" show="true" type="custom" dataset="1	,2	,3	,4	,5	,6	,7	,8	,9	,10	,11	,12	,13	,14	,15	,16	,17	,18	,19	,20	,21	,22	,23	,24	,25	,26	,27	,28	,29	,30	,31" on-change="dobDayChange($event, $scope, newVal, oldVal)" margin="unset 50px unset unset"
+                                                                placeholder="D" name="form_field108"></wm-form-field>
+                                                        </wm-gridcolumn>
+                                                        <wm-gridcolumn columnwidth="4" name="gridcolumn245">
+                                                            <wm-form-field widget="select" show="true" type="custom" dataset="1,2,3,4,5,6,7,8,9,10,11,12" on-change="dobDayChange($event, $scope, newVal, oldVal)" margin="unset 50px unset unset" placeholder="M" name="form_field109"></wm-form-field>
+                                                        </wm-gridcolumn>
+                                                        <wm-gridcolumn columnwidth="4" name="gridcolumn246">
+                                                            <wm-form-field widget="select" show="true" type="custom" dataset="bind:Variables.stvYearListPlusTenYears.dataSet" placeholder="Y" datafield="dataValue" displayfield="dataValue" name="form_field110"></wm-form-field>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                </wm-layoutgrid>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow133">
+                                            <wm-gridcolumn columnwidth="8" name="gridcolumn267">
+                                                <wm-label padding="unset 0.5em" name="lblNextofKinorCarer" caption="Parent/Guardian's:" fontweight="bold" fontsize="11"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn273"></wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow101">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn247">
+                                                <wm-label padding="unset 0.5em" caption="Medicare Card Number." name="label82"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="8" name="gridcolumn248">
+                                                <wm-form-field widget="text" show="true" type="custom" placeholder="" name="form_field111"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow102">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn249">
+                                                <wm-label padding="unset 0.5em" caption="M.Ref No:" name="label83"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="8" name="gridcolumn250">
+                                                <wm-form-field widget="text" show="true" type="custom" placeholder="" name="form_field112"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow103">
+                                            <wm-gridcolumn columnwidth="3" name="gridcolumn251">
+                                                <wm-label padding="unset 0.5em" caption="Medicare Expiry Date" name="label84"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="9" name="gridcolumn252">
+                                                <wm-layoutgrid name="layoutgrid33">
+                                                    <wm-gridrow padding="unset unset unset -1px" name="gridrow104">
+                                                        <wm-gridcolumn columnwidth="4" name="gridcolumn253">
+                                                            <wm-form-field widget="select" show="true" type="custom" dataset="1	,2	,3	,4	,5	,6	,7	,8	,9	,10	,11	,12	,13	,14	,15	,16	,17	,18	,19	,20	,21	,22	,23	,24	,25	,26	,27	,28	,29	,30	,31" on-change="dobDayChange($event, $scope, newVal, oldVal)" margin="unset 50px unset unset"
+                                                                placeholder="D" name="form_field113"></wm-form-field>
+                                                        </wm-gridcolumn>
+                                                        <wm-gridcolumn columnwidth="4" name="gridcolumn254">
+                                                            <wm-form-field widget="select" show="true" type="custom" dataset="1,2,3,4,5,6,7,8,9,10,11,12" on-change="dobDayChange($event, $scope, newVal, oldVal)" margin="unset 50px unset unset" placeholder="M" name="form_field114"></wm-form-field>
+                                                        </wm-gridcolumn>
+                                                        <wm-gridcolumn columnwidth="4" name="gridcolumn255">
+                                                            <wm-form-field widget="select" show="true" type="custom" dataset="bind:Variables.stvYearListPlusTenYears.dataSet" placeholder="Y" datafield="dataValue" displayfield="dataValue" name="form_field115"></wm-form-field>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                </wm-layoutgrid>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow105" padding="15px unset unset unset">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn256">
+                                                <wm-label padding="unset 0.5em" name="label85" caption="Please complete the following information if this relates to a Workcover or Third PArty Claim" fontweight="bold" textdecoration="underline"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow106">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn259">
+                                                <wm-label padding="1.7em 0.5em unset 0.5em" name="label86" caption="IS THIS CLAIM:"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="8" name="gridcolumn258_1">
+                                                <wm-form-field displayname="A WORKCOVER INJURY" widget="radioset" show="true" type="custom" name="form_field116" layout="inline" dataset="Yes,No"></wm-form-field>
+                                                <wm-label padding="unset unset unset 80px" name="label87" caption="Or" fontweight="bold"></wm-label>
+                                                <wm-form-field displayname="THIRD PARTY" widget="radioset" show="true" type="custom" layout="inline" dataset="Yes,No" name="form_field117"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow107">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn260_1">
+                                                <wm-label padding="1.7em 0.5em unset 0.5em" caption="CLAIM NO:" name="lblClaimNo"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="8" name="gridcolumn261">
+                                                <wm-form-field widget="text" show="true" type="custom" placeholder="" name="txtClaimNo"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow108">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn262_1">
+                                                <wm-label padding="1.7em 0.5em unset 0.5em" caption="INJURY DATE" name="lblInjuryDate"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="8" name="gridcolumn263_1">
+                                                <wm-form-field widget="text" show="true" type="custom" placeholder="" name="txtInjuryDate"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow109">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn264">
+                                                <wm-label padding="1.7em 0.5em unset 0.5em" caption="INSURER:" name="lblInsurer"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="8" name="gridcolumn265">
+                                                <wm-form-field widget="text" show="true" type="custom" placeholder="" name="txtInsurer"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow110">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn266">
+                                                <wm-label padding="1.7em 0.5em unset 0.5em" caption="CASE MANAGER:" name="lblCaseManager"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="8" name="gridcolumn267_1">
+                                                <wm-form-field widget="text" show="true" type="custom" placeholder="" name="txtCaseManager"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow111">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn268_1">
+                                                <wm-label padding="1.7em 0.5em unset 0.5em" caption="CONTACT PH:" name="lblContactPh"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="8" name="gridcolumn269">
+                                                <wm-form-field widget="text" show="true" type="custom" placeholder="" name="txtContactPh"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow112">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn270">
+                                                <wm-label padding="1.7em 0.5em unset 0.5em" caption="EMPLOYER:" name="lblEmployer"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="8" name="gridcolumn271">
+                                                <wm-form-field widget="text" show="true" type="custom" placeholder="" name="txtEmployer"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow113">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn272">
+                                                <wm-label padding="1.7em 0.5em unset 0.5em" caption="SOLICITOR:(if applicable)" name="lblSolicitor"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="8" name="gridcolumn273_1">
+                                                <wm-form-field widget="text" show="true" type="custom" placeholder="" name="txtSolicitor"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow114">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn275">
+                                                <wm-html name="html1" class="text-justify">
+                                                    <p><b>Documentation from the insurance company supporting acceptance of your claim MUST be provided, or the onus will be upon you to settle the account on the day of consultation. Please note that although this may be a claim, the final responsibility for payment does fall on the patient*</b></p>
+                                                </wm-html>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow63" padding="10px unset unset unset">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn116">
+                                                <wm-label padding="unset 0.5em" name="label49" caption="General Information and Fees" fontweight="bold" textdecoration="underline"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow64">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn117">
+                                                <wm-label padding="unset 0.5em" name="label50" caption="Medicare does not completely cover the cost of your consultation. The consultation fees charged by Doctor are as follows;"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow65">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn118">
+                                                <wm-label padding="unset 0.5em" name="label51" caption="Initial Consultation:" fontweight="bold"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn123">
+                                                <wm-label padding="unset 0.5em" name="label57" caption="$150.00"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow66">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn119">
+                                                <wm-label padding="unset 0.5em" caption="Medicare Rebate:" fontweight="bold" name="label56"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn124">
+                                                <wm-label padding="unset 0.5em" name="label59" caption="$72.75"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow67">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn120">
+                                                <wm-label padding="unset 0.5em" name="label52" caption="Follow Up Consultation:" fontweight="bold"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn125_1">
+                                                <wm-label padding="unset 0.5em" name="label60" caption="$90.00"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow68">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn121">
+                                                <wm-label padding="unset 0.5em" name="label53" caption="Medicare Rebate:" fontweight="bold"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn126">
+                                                <wm-label padding="unset 0.5em" name="label61" caption="$36.55"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow69">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn122">
+                                                <wm-label padding="unset 0.5em" name="label55" caption="Injections:" fontweight="bold"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn127">
+                                                <wm-label padding="unset 0.5em" name="label62" caption="$45.00 (No Medicare Rebate)"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow70">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn128">
+                                                <wm-html name="html2" class="text-justify">
+                                                    <p><b>I understand that payment in full of the account is my responsibility and a gap will be charged above the Medicare Rebate. Failure to pay accounts will result in legal action / debt collection which incurs an additional charge by myself. In engaging Dr Cabot, I acknowledge that my contractual relations are with the Medical Practitioner and not Orthopaedics SA Pty Ltd and i further acknowledge that Orthopaedics SA is not the provider of the medical services </b></p>
+                                                </wm-html>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-container>
+                            </wm-container>
+                            <wm-layoutgrid name="layoutgrid68_1">
+                                <wm-gridrow name="gridrow154_4">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn465_4" horizontalalign="center">
+                                        <wm-form-field widget="checkbox" show="true" type="custom" name="chkAgreetheTermsAbove" caption="I Agree to the Terms Above"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow73">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn131_1">
+                                        <wm-container name="container8" height="200" show="true" animation="zoomInDown">
+                                            <div class="signature-pad" id="signature-pad" width="200" height="200">
+                                                <div class="signature-pad--body"><canvas width="200" height="200"></canvas></div>
+                                                <div class="signature-pad--actions">
+                                                    <div style="margin:auto"><button class="button clear" type="button" data-action="clear">Clear</button><button class="button" type="button" data-action="undo">Undo</button></div>
+                                                </div>
+                                            </div>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow155">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn461_5" horizontalalign="center" padding="1em unset unset unset">
+                                        <wm-button class="btn-default no-border" caption="Submit" type="submit" margin="unset 0.5em" name="btnSubmit" textalign="center" show="bind:Widgets.pgPatientPortal.formWidgets.chkAgreetheTermsAbove.datavalue" animation="fadeIn" backgroundcolor="#00a79b"
+                                            bordercolor="#000000" color="#fff" on-click="Variables.svCreateCSV.invoke()" on-tap="btnSubmitTap($event, $scope)"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow118_1">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn350">
+                                        <wm-form-field displayname="CSV" widget="textarea" show="false" type="custom" name="txtCSVText" placeholder="" disabled="false" readonly="true" on-change="txtCSVTextChange($event, $scope, newVal, oldVal)"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow118_2">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn349"></wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-form>
+        </wm-page-content>
+    </wm-content>
+</wm-page>

@@ -15,6 +15,10 @@
   "type" : "PAGE",
   "params" : [ ]
 }, {
+  "name" : "PgPatientRegForm_Copy",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "Registration",
   "type" : "PAGE",
   "params" : [ ]
@@ -28,6 +32,10 @@
   "params" : [ ]
 }, {
   "name" : "pgList",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "pgTest",
   "type" : "PAGE",
   "params" : [ ]
 } ]

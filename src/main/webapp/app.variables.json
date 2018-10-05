@@ -130,6 +130,28 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
+  "goToPage_PgPatientRegForm_Copy" : {
+    "_id" : "wm-goToPage_PgPatientRegForm_Copy-wm.NavigationVariable-1538737762107",
+    "name" : "goToPage_PgPatientRegForm_Copy",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "PgPatientRegForm_Copy",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_pgTest" : {
+    "_id" : "wm-goToPage_pgTest-wm.NavigationVariable-1538735537874",
+    "name" : "goToPage_pgTest",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "pgTest",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_Registration" : {
     "_id" : "wm-goToPage_Registration-wm.NavigationVariable-1537867108763",
     "name" : "goToPage_Registration",
