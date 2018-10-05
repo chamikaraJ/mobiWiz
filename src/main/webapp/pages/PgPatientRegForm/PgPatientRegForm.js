@@ -504,10 +504,8 @@ Application.$controller("PgPatientRegFormPageController", ["$scope", function($s
 
 
     $scope.btnSubmitTap = function($event, $isolateScope) {
-        debugger;
         $scope.Variables.stvBase64ImageUrl.dataSet.dataValue = signaturePad.toDataURL();
-        debugger;
-        $scope.Variables.stvBase64ImageUrl.invoke();
+        $scope.Variables.svSaveSignatureAsImage.invoke();
     };
 
 
