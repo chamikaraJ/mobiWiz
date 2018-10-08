@@ -207,7 +207,7 @@
                 </entry>
                 <entry key="user">
                     <bean class="com.wavemaker.commons.model.security.RoleConfig">
-                        <property name="landingPage" value="pgList"/>
+                        <property name="landingPage" value="PgPatientRegForm_Copy"/>
                     </bean>
                 </entry>
             </map>

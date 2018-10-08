@@ -8,6 +8,6 @@
   "name" : "user",
   "description" : null,
   "roleConfig" : {
-    "landingPage" : "pgList"
+    "landingPage" : "PgPatientRegForm_Copy"
   }
 } ]
